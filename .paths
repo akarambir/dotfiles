@@ -1,3 +1,4 @@
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 # ensure all new environments are isolated from the site-packages directory
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
@@ -12,14 +13,14 @@ else
 fi
 
 # For Geodjango apps
-export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
-export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
-export PATH=/Library/Frameworks/GEOS.framework/Programs:$PATH
-export PATH=/Library/Frameworks/SQLite3.framework/Programs:$PATH
-export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+# export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
+# export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
+# export PATH=/Library/Frameworks/GEOS.framework/Programs:$PATH
+# export PATH=/Library/Frameworks/SQLite3.framework/Programs:$PATH
+# export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
 
 # For postgresql app
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+# export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # For mysql
-export PATH=$PATH:/usr/local/mysql/bin
+# export PATH=$PATH:/usr/local/mysql/bin
