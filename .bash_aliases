@@ -1,24 +1,12 @@
 #!/bin/bash
 
-# Personal aliases
-makecfunc() {
-clang -ggdb3 -O0 -std=c99 -Wall -Werror $1.c -o $1
-}
-makecfunccs50() {
-clang -ggdb3 -O0 -std=c99 -Wall -Werror $1.c -lcs50 -lm -o $1
-}
-alias makec=makecfunc
-alias makecs50=makecfunccs50
-
-# Services
-alias _mysql="sudo service mysql"
-alias _postgre="sudo service postgresql"
-alias _nginx="sudo service nginx"
-alias _apache="sudo service apache2" 
+# Gen ctags for Python projects
+alias pygenctags='ctags -R --python-kinds=-i --languages=python -f $VIRTUAL_ENV/.tags $VIRTUAL_ENV/lib/python*/site-packages'
 
 # Run Programs 
 alias p="ipython"
 alias v="vim"
+alias gvim="mvim"
 
 #Vagrant Commands
 alias vgi="vagrant init"
