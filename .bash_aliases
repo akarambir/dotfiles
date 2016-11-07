@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias mycow='fortune | cowsay | lolcat'
+
 # Gen ctags for Python projects
 alias pygenctags='ctags -R --python-kinds=-i --languages=python -f $VIRTUAL_ENV/.tags $VIRTUAL_ENV/lib/python*/site-packages'
 

@@ -1,4 +1,4 @@
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 # ensure all new environments are isolated from the site-packages directory
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
@@ -13,14 +13,43 @@ else
 fi
 
 # For Geodjango apps
-# export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
-# export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
-# export PATH=/Library/Frameworks/GEOS.framework/Programs:$PATH
-# export PATH=/Library/Frameworks/SQLite3.framework/Programs:$PATH
-# export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+#export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
+#export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
+#export PATH=/Library/Frameworks/GEOS.framework/Programs:$PATH
+#export PATH=/Library/Frameworks/SQLite3.framework/Programs:$PATH
+#export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
 
-# For postgresql app
-# export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+# Brew golang
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$HOME/.gopath
 
-# For mysql
-# export PATH=$PATH:/usr/local/mysql/bin
+# NPM directory for global installs
+export PATH=~/.npm-global/bin:$PATH
+
+# Brew osx coreutils
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+
+export PATH="/usr/local/sbin:$PATH"
+
+
+# Brew python2
+# export PATH=`brew --prefix python`/bin:$PATH
+
+# Google Cloud sdk via brew cask
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+
+# Add mopidy server related paths
+# export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+
+# Android sdk
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+export PATH="$HOME/.cargo/bin:$PATH"
+#
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

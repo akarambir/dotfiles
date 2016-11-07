@@ -108,6 +108,11 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
 
+
+        unstage = reset -q HEAD --
+        discard = checkout --
+        nevermind = !git reset --hard HEAD && git clean -d -f
+        uncommit = reset --mixed HEAD~
 [color]
 
 	ui = auto
